@@ -1,0 +1,14 @@
+---
+- name: "install et lancement d'une instance ec2"
+  hosts: localhost
+  module_defaults:
+    group/aws:
+      aws_access_key: "--REMOVE--" 
+#'{{ aws_access_key }}'
+      aws_secret_key: "--REMOVE--" 
+#'{{ aws_secret_key }}'
+      region: eu-west-1
+
+  roles:
+    - AWS
+
